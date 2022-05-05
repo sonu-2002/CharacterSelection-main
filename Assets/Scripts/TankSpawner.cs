@@ -8,6 +8,5 @@ public class TankSpawner : MonoBehaviour
     void Awake()
     {
         Instantiate(Tank, Vector3.zero, Quaternion.identity);
-        
     }
 }

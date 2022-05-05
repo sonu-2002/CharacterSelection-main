@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 1279721028}
   - component: {fileID: 1279721027}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: TankSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
