@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce69f2987c3c9224aac032a4ada9e102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tank: {fileID: 3422768919992297937, guid: b9b3c9c964b76c64d8298e7caff6cd14, type: 3}
+  tankView: {fileID: 114992581818677530, guid: b9b3c9c964b76c64d8298e7caff6cd14, type: 3}
 --- !u!4 &1279721028
 Transform:
   m_ObjectHideFlags: 0

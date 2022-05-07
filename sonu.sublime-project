@@ -1,0 +1,25 @@
+{
+ "folders":
+ [
+  {
+  "follow_symlinks": true,
+  "path": "Assets",
+   "file_exclude_patterns":
+   [
+    "*.dll",
+    "*.meta",
+    "*.mat",
+    "*.unity",
+    "*.png",
+    "*.jpg",
+    "*.prefab",
+    "*.anim",
+    "*.mp3",
+    "*.FBX",
+    "*.controller",
+    "*.cubemap"
+   ]
+  }
+ ],
+ "solution_file": "./CharacterSelection-main.sln"
+}

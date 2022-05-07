@@ -1,12 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TankSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject Tank;
+    [SerializeField] TankView tankView;
     void Awake()
     {
-        Instantiate(Tank, Vector3.zero, Quaternion.identity);
+
+        createTank();
     }
+
+    void createTank()
+    {
+
+        TankModel tankModel = new TankModel();
+        TankController tankcontroller = new TankController();
+        tankcontroller.SetRefAndCreateTank(tankModel, tankView);
+    }
+
 }
