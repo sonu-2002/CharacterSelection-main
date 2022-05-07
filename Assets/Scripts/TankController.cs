@@ -18,6 +18,6 @@ public class TankController
     void createTank()
     {
 
-        GameObject.Instantiate(tankView, Vector3.zero, Quaternion.identity);
+        GameObject.Instantiate(tankView.gameObject, Vector3.zero, Quaternion.identity);
     }
 }
