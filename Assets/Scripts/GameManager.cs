@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
-public class TankSpawner : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [SerializeField] TankView tankView;
     void Awake()
     {
 
         createTank();
+        SetUpCameraRef();
     }
 
     void createTank()
@@ -16,5 +17,13 @@ public class TankSpawner : MonoBehaviour
         TankController tankcontroller = new TankController();
         tankcontroller.SetRefAndCreateTank(tankModel, tankView);
     }
+
+    void SetUpCameraRef()
+    {
+
+        
+    }
+
+
 
 }
