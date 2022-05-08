@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TankPos: {fileID: 0}
   TankLook: {fileID: 0}
-  Smoothness: 0.3
+  Smoothness: 0.5
 --- !u!1 &1279721026
 GameObject:
   m_ObjectHideFlags: 0

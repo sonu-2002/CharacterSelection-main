@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class TankView : MonoBehaviour
 {
 
+
+    public List<TankProperties> Tank;
     TankController tankcontroller;
+    public MeshRenderer[] Childs;
 
     float VerticalInput;
     float RotateInput;
@@ -33,7 +37,20 @@ public class TankView : MonoBehaviour
     void SetUpCameraRef()
     {
 
-        Camera.main.GetComponent<CameraMovement>().TankPos=this.gameObject.transform.GetChild(1);
-        Camera.main.GetComponent<CameraMovement>().TankLook=this.gameObject.transform.GetChild(2);
+        Camera.main.GetComponent<CameraMovement>().TankPos = this.gameObject.transform.GetChild(1);
+        Camera.main.GetComponent<CameraMovement>().TankLook = this.gameObject.transform.GetChild(2);
     }
+}
+
+
+[System.Serializable]
+public class TankProperties
+{
+
+
+
+    public int speed;
+    public int RotAngle;
+    public TankTypes tankType;
+    public Material TankMat;
 }

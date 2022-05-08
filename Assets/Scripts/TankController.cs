@@ -5,17 +5,10 @@ public class TankController
     TankModel tankModel;
     TankView tankView;
 
-    public void SetRefAndCreateTank(TankModel _tankModel, TankView _tankView)
+    public void SetRefAndCreateTank(TankView _tankView)
     {
-
-        tankModel = _tankModel;
         tankView = _tankView;
-
-        tankModel.SetTankController(this);
-
         createTank();
-
-
 
     }
     void createTank()
@@ -23,6 +16,10 @@ public class TankController
 
         tankView = GameObject.Instantiate(tankView.gameObject, Vector3.zero, Quaternion.identity).GetComponent<TankView>();
         tankView.SetTankController(this);
+        tankModel = new TankModel(tankView.Tank[0].speed, tankView.Tank[0].RotAngle, tankView.Tank[0].TankMat);
+        tankModel.SetTankController(this);
+
+        setTankMat();
     }
 
 
@@ -33,7 +30,7 @@ public class TankController
         tankView.GetComponent<Rigidbody>().position += tankView.transform.forward * VerticalInput * tankModel.speed * Time.deltaTime;
 
 
-                          //--<< comments on transform.forward >>--\\
+        //--<< comments on transform.forward >>--\\
 
         /*  transform.forward gives a vector3 which is resposible for local space z Axis movement :
           For Example :
@@ -47,6 +44,16 @@ public class TankController
                   means Local space incrementation (0,0,1) = transform.forward = world space it's incrementation (1, 0, 1);
         */
 
-        tankView.transform.localEulerAngles += Vector3.up*tankModel.rotDegreePerSec*RotateInput*Time.deltaTime;
+        tankView.transform.localEulerAngles += Vector3.up * tankModel.rotDegreePerSec * RotateInput * Time.deltaTime;
+    }
+
+    public void setTankMat()
+    {
+
+        for (int i = 0; i < tankView.Childs.Length; i++)
+        {
+
+            tankView.Childs[i].material = tankModel.TankMat;
+        }
     }
 }

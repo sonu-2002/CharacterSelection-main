@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -9,16 +8,37 @@ public class CameraMovement : MonoBehaviour
 
     [SerializeField] float Smoothness;
 
+    void Awake()
+    {
+
+        StartCoroutine(TankRef());
+    }
+    IEnumerator TankRef()
+    {
+
+        while (TankPos == null)
+        {
+
+            yield return new WaitForSeconds(0.1f);
+        }
 
 
+        transform.position = Vector3.Lerp(transform.position, TankPos.position, 1);
+        transform.LookAt(TankLook);
+    }
 
     void Update()
     {
 
         if (TankPos != null)
         {
-            transform.position = Vector3.Lerp(transform.position, TankPos.position, Smoothness);
-            transform.LookAt(TankLook);
+            float VerticalInput = Input.GetAxis("Vertical");
+
+            if (VerticalInput != 0)
+            {
+                transform.position = Vector3.Lerp(transform.position, TankPos.position, Smoothness);
+                transform.LookAt(TankLook);
+            }
         }
     }
 }

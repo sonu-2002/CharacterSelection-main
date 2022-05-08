@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TankView tankView;
@@ -7,23 +8,18 @@ public class GameManager : MonoBehaviour
     {
 
         createTank();
-        SetUpCameraRef();
+       
     }
 
     void createTank()
     {
 
-        TankModel tankModel = new TankModel();
-        TankController tankcontroller = new TankController();
-        tankcontroller.SetRefAndCreateTank(tankModel, tankView);
-    }
-
-    void SetUpCameraRef()
-    {
-
         
+        TankController tankcontroller = new TankController();
+        tankcontroller.SetRefAndCreateTank(tankView);
     }
 
+   
 
 
 }

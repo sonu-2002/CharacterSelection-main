@@ -108,6 +108,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c6959bbe5bd4c4a96bdfe33370813f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tank:
+  - speed: 7
+    RotAngle: 35
+    tankType: 0
+    TankMat: {fileID: 2100000, guid: ff21ff0ea9b18924bb1fdfbb0e58f5cb, type: 2}
+  - speed: 5
+    RotAngle: 30
+    tankType: 1
+    TankMat: {fileID: 2100000, guid: 12c120f2400576c4f97a98bcca5529bc, type: 2}
+  - speed: 4
+    RotAngle: 27
+    tankType: 2
+    TankMat: {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}
+  Childs:
+  - {fileID: 3422768919990105761}
+  - {fileID: 3422768919990105767}
+  - {fileID: 3422768919990105769}
+  - {fileID: 3422768919990105763}
 --- !u!54 &7956305934015813151
 Rigidbody:
   m_ObjectHideFlags: 0
