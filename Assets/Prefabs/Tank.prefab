@@ -109,15 +109,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tank:
-  - speed: 7
+  - speed: 9
     RotAngle: 35
     tankType: 0
     TankMat: {fileID: 2100000, guid: ff21ff0ea9b18924bb1fdfbb0e58f5cb, type: 2}
-  - speed: 5
+  - speed: 8
     RotAngle: 30
     tankType: 1
     TankMat: {fileID: 2100000, guid: 12c120f2400576c4f97a98bcca5529bc, type: 2}
-  - speed: 4
+  - speed: 7
     RotAngle: 27
     tankType: 2
     TankMat: {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}

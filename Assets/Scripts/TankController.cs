@@ -5,18 +5,18 @@ public class TankController
     TankModel tankModel;
     TankView tankView;
 
-    public void SetRefAndCreateTank(TankView _tankView)
+    public void SetRefAndCreateTank(TankView _tankView, int TankTypeIndex)
     {
         tankView = _tankView;
-        createTank();
+        createTank(TankTypeIndex);
 
     }
-    void createTank()
+    void createTank(int TankTypeIndex)
     {
 
         tankView = GameObject.Instantiate(tankView.gameObject, Vector3.zero, Quaternion.identity).GetComponent<TankView>();
         tankView.SetTankController(this);
-        tankModel = new TankModel(tankView.Tank[0].speed, tankView.Tank[0].RotAngle, tankView.Tank[0].TankMat);
+        tankModel = new TankModel(tankView.Tank[TankTypeIndex].speed, tankView.Tank[TankTypeIndex].RotAngle, tankView.Tank[TankTypeIndex].TankMat);
         tankModel.SetTankController(this);
 
         setTankMat();

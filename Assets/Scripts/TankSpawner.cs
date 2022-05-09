@@ -1,25 +1,25 @@
 ﻿using UnityEngine;
 
 
-public class GameManager : MonoBehaviour
+public class TankSpawner : MonoBehaviour
 {
     [SerializeField] TankView tankView;
+
     void Awake()
     {
 
-        createTank();
-       
+
+
     }
 
-    void createTank()
+    public void createTank(int TankTypeIndex)
     {
 
-        
         TankController tankcontroller = new TankController();
-        tankcontroller.SetRefAndCreateTank(tankView);
+        tankcontroller.SetRefAndCreateTank(tankView, TankTypeIndex);
     }
 
-   
+
 
 
 }
