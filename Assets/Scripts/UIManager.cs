@@ -25,7 +25,6 @@ public class UIManager : MonoBehaviour
     }
     void DisabledUI()
     {
-
         this.gameObject.SetActive(false);
     }
 }
